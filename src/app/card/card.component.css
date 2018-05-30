@@ -1,0 +1,72 @@
+.card {
+	margin-top: 1.5rem;
+}
+
+.card-block {
+	position: relative;
+}
+
+.card .card-block .toggle {
+	text-align: center;
+	width: 40px;
+	/* auto, since non-WebKit browsers doesn't support input styling */
+	height: auto;
+	position: absolute;
+	top: 7px;
+	bottom: 0;
+	margin: auto 0;
+	border: none; /* Mobile Safari */
+	-webkit-appearance: none;
+	appearance: none;
+	display: block;
+	outline: none;
+}
+
+.card .card-block .toggle:after {
+	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
+}
+
+.card .card-block .toggle:checked:after {
+	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
+}
+
+.card .card-block label {
+	word-break: break-word;
+	padding: 15px 45px 15px 5px;
+	margin-left: 45px;
+	display: block;
+	line-height: 1.2;
+	transition: color 0.4s;
+	text-align: left;
+}
+
+.card .card-block.completed label {
+	color: #d9d9d9;
+	text-decoration: line-through;
+}
+
+.card .card-block .destroy {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	bottom: 0;
+	width: 30px;
+	height: 30px;
+	font-size: 30px;
+	color: #cc9a9a;
+	transition: color 0.2s ease-out;
+	border: transparent;
+	background-color: transparent;
+	outline: none;
+}
+
+.card .card-block .destroy:hover {
+	color: #af5b5e;
+}
+
+.card .card-block .destroy:after {
+	content: '×';
+	position: absolute;
+	top: -12px;
+	right: 3px;
+}

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "getting-started-ng5": {
+    "todo-list": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/getting-started-ng5",
+            "outputPath": "dist/todo-list",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "getting-started-ng5:build"
+            "browserTarget": "todo-list:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "getting-started-ng5:build:production"
+              "browserTarget": "todo-list:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "getting-started-ng5:build"
+            "browserTarget": "todo-list:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "getting-started-ng5-e2e": {
+    "todo-list-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,7 +103,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "getting-started-ng5:serve"
+            "devServerTarget": "todo-list:serve"
           }
         },
         "lint": {
@@ -118,5 +118,5 @@
       }
     }
   },
-  "defaultProject": "getting-started-ng5"
+  "defaultProject": "todo-list"
 }

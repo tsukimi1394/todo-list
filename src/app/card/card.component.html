@@ -1,0 +1,7 @@
+<div class="card">
+  <div class="card-block" [class.completed]="card.complete">
+  	<input class="toggle" type="checkbox" (click)="toggleCardComplete(card)" [checked]="card.complete">
+    <label class="card-text">{{ card.title }}</label>
+    <button class="destroy" (click)="removeCard(card)"></button>
+  </div>
+</div>
