@@ -1,9 +1,12 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<logo-comp [amount]="amount"></logo-comp>
   <a class="navbar-brand" href="#">Todo List</a>
 </nav>
 <div class="container-fluid text-center pb-5">
-  <div class="row justify-content-end">
-    <app-new-card-input (add)="onAddCard($event)"></app-new-card-input>
+  <div class="row justify-content-start">
+    <app-new-card-input (add)="onAddCard($event)" (newCard.title)="okay"></app-new-card-input>
   </div>
 </div>
-<app-card-list [cards]="cards" (toggleComplete)="onToggleCardComplete($event)" (remove)="onRemoveCard($event)"></app-card-list>
+<!--<app-card-list *ngIf="okay" [cards]="cards" (toggleComplete)="onToggleCardComplete($event)" (remove)="onRemoveCard($event)"></app-card-list>-->
+<app-card-list *ngIf="okay" [cards]="cards" (remove)="onRemoveCard($event)"></app-card-list>
+<app-error-msg *ngIf="!okay" [errorMessage]="errorMessage"></app-error-msg>

@@ -1,0 +1,21 @@
+.logo-main {
+	display: flex;
+	align-items: center;
+}
+
+.logo-wrapper {
+	width: 50px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.logo {
+	width: 50px;
+}
+
+.amount-of-tasks {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 15px;
+	color: #ffffff;
+}

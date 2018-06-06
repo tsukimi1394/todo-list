@@ -9,10 +9,14 @@ import { Card } from '../card';
 })
 export class NewCardInputComponent implements OnInit {
 
+  @Output()
   newCard: Card = new Card();
 
 	@Output()
   add: EventEmitter<Card> = new EventEmitter();
+
+  @Output()
+  check: EventEmitter<Card> = new EventEmitter();
 
   constructor() { }
 
@@ -20,7 +24,8 @@ export class NewCardInputComponent implements OnInit {
   }
 
   addCard() {
-  	this.add.emit(this.newCard);
+    this.check.emit(this.newCard);
+    this.add.emit(this.newCard);
   	this.newCard = new Card();
   }
 
